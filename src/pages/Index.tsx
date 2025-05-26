@@ -1,6 +1,7 @@
 
 import React, { useEffect } from 'react';
 import RequisitionForm from '@/components/RequisitionForm';
+import Navigation from '@/components/Navigation';
 import '@/styles/print.css';
 
 const Index = () => {
@@ -14,12 +15,15 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-100 py-8 px-4 print:bg-white print:p-0">
-      <div className="max-w-4xl mx-auto">
-        <RequisitionForm />
-        <footer className="mt-8 text-center text-sm text-gray-500 print:hidden">
-          <p>© 2025 LNMIIT. All rights reserved.</p>
-        </footer>
+    <div className="min-h-screen bg-gray-100">
+      <Navigation />
+      <div className="py-8 px-4 print:bg-white print:p-0">
+        <div className="max-w-4xl mx-auto">
+          <RequisitionForm />
+          <footer className="mt-8 text-center text-sm text-gray-500 print:hidden">
+            <p>© 2025 LNMIIT. All rights reserved.</p>
+          </footer>
+        </div>
       </div>
     </div>
   );
